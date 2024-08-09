@@ -1,15 +1,16 @@
 import { React, useState } from "react";
 import faqData from "./faqData";
+import "./styles.css";
 
 function Accordian() {
     {/*Singe Selection*/ }
     const [active, setActive] = useState(null);
 
     function handleSingleSelection(getCurrentId) {
-        console.log(getCurrentId);
-
+        setActive(getCurrentId === active ? null : getCurrentId);
     }
 
+    console.log(active);
     return (
         <div className="wrapper">
             <div className="accordian">
@@ -24,6 +25,11 @@ function Accordian() {
                             </h3>
                             <span>+</span>
                         </div>
+                        {
+                            active === item.id ?
+                                <div className="accordian__content">{item.answer}</div>
+                                : null
+                        }
                     </div>
                 )) : <div>No data found</div>
                 }
