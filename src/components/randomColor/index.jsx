@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 function RandomColor() {
-    const [typeOfColor, setTypeOfColor] = useState("hex");
     const [color, setColor] = useState("#000000");
     const [colorName, setColorName] = useState("#000000");
 
@@ -34,15 +33,18 @@ function RandomColor() {
     return (
         <Container color={color}>
             <div className="container__box">
-                <button onClick={handleCreateRandomHexColor}>
-                    Create HEX Color
-                </button>
-                <button onClick={handleCreateRandomRgbColor}>
-                    Create RGB Color
-                </button>
-                <button onClick={handleGenerateRandomColor}>
-                    Generate Random Color
-                </button>
+                <div className="button__box">
+                    <button onClick={handleCreateRandomHexColor}>
+                        Create HEX Color
+                    </button>
+                    <button onClick={handleCreateRandomRgbColor}>
+                        Create RGB Color
+                    </button>
+                    <button onClick={handleGenerateRandomColor}>
+                        Generate Random Color
+                    </button>
+
+                </div>
                 <ColorName>{colorName}</ColorName>
             </div>
         </Container>
