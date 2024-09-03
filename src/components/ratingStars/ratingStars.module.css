@@ -1,0 +1,30 @@
+.starRating {
+    height: 100vh;
+    width: 100vw;
+     /* Adds spacing between stars */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    background-color: black;
+    
+}
+
+.starContainer {
+    position: relative;
+    display: flex;
+    top: 40%;
+    gap: 4px;
+    justify-content: center;
+}
+
+.star {
+    color: #ddd; /* Default color for inactive stars */
+    font-size: 79px; /* Adjust the size of the stars */
+    transition: color 0.2s; /* Smooth transition for color change */
+}
+
+.star:hover {
+    color: #ffc107; /* Highlight color on hover */
+}
+
+.active {
+    color: #FFD700; /* Gold color for active stars */
+}
