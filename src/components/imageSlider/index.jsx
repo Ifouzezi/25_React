@@ -33,29 +33,39 @@ const ImageSlider = () => {
                 >
                     Next
                 </button>
+                <Indicators>
+                    {imageData.map((_, index) => (
+                        <Dot
+                            key={index}
+                            isActive={index === currentIndex}
+                            onClick={() => setCurrentIndex(index)}
+                        />
+                    ))}
+                </Indicators>
             </Slider>
         </Container>
     );
 };
 
 const Container = styled.div`
-    width: 100vw;  /* Full viewport width */
-    height: 100vh; /* Full viewport height */
+    width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: black;
 `;
 
 const Slider = styled.div`
     position: relative;
-    width: 80%; /* Adjust as needed */
-    height: 80%; /* Adjust as needed */
+    width: 80%;
+    height: 80%;
 
     img {
         width: 100%;
         height: 100%;
-        object-fit: contain; 
+        object-fit: contain;
+        transition: opacity 0.5s ease-in-out;
     }
 
     p {
@@ -63,6 +73,7 @@ const Slider = styled.div`
         margin-top: 10px;
         font-size: 24px;
         font-weight: 500;
+        color: white;
     }
 
     button {
@@ -84,6 +95,23 @@ const Slider = styled.div`
     .next {
         right: 10px;
     }
+`;
+
+const Indicators = styled.div`
+    display: flex;
+    position: relative;
+    bottom: 25%;
+    justify-content: center;
+    margin-top: 15px;
+`;
+
+const Dot = styled.div`
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: ${({ isActive }) => (isActive ? 'white' : 'gray')};
+    cursor: pointer;
 `;
 
 export default ImageSlider;

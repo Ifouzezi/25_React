@@ -1,6 +1,5 @@
 .starRating {
     height: 100vh;
-    width: 100vw;
      /* Adds spacing between stars */
     cursor: pointer; /* Changes cursor to pointer on hover */
     background-color: black;

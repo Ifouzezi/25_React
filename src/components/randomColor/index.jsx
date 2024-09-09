@@ -53,7 +53,7 @@ function RandomColor() {
 
 const Container = styled.div`
     .container__box {
-        width: 100vw;
+        width: 100%;
         height: 100vh;
         background: ${(props) => props.color};
     }

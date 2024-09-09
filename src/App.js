@@ -8,16 +8,16 @@ function App() {
   return (
     <div className="App">
       {/* Accordian component */}
-      <Accordian />
+      {/* <Accordian /> */}
 
       {/* RandomColor component */}
-      <RandomColor />
+      {/* <RandomColor /> */}
 
       {/* RatingStars component */}
-      <StarRating noOfStars ={5}/>
+      {/* <StarRating noOfStars ={5}/> */}
 
       {/* ImageSlider component */}
-      <ImageSlider/>
+      {/* <ImageSlider/> */}
 
     </div>
   );
