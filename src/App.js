@@ -1,6 +1,7 @@
 import './App.css';
 import Accordian from './components/accordian';
 import ImageSlider from './components/imageSlider';
+import LoadMoreData from './components/loadMoreData';
 import RandomColor from './components/randomColor';
 import StarRating from './components/ratingStars';
 
@@ -18,6 +19,9 @@ function App() {
 
       {/* ImageSlider component */}
       {/* <ImageSlider/> */}
+
+      {/* LoadMoreData component */}
+      <LoadMoreData/>
 
     </div>
   );
