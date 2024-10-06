@@ -4,6 +4,8 @@ import ImageSlider from './components/imageSlider';
 import LoadMoreData from './components/loadMoreData';
 import RandomColor from './components/randomColor';
 import StarRating from './components/ratingStars';
+import Sidebar from './components/treeMenu';
+
 
 function App() {
   return (
@@ -21,7 +23,10 @@ function App() {
       {/* <ImageSlider/> */}
 
       {/* LoadMoreData component */}
-      <LoadMoreData/>
+      {/* <LoadMoreData/> */}
+
+      {/* TreeMenu component */}
+      <Sidebar/>
 
     </div>
   );

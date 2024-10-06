@@ -38,10 +38,10 @@ function LoadMoreData() {
   return (
     <div className="container">
       <h1>Load More Data</h1>
-      
+
       {/* Show loading text when data is being fetched */}
       {loading && <p>Loading...</p>}
-      
+
       <div className="product__container">
         {
           products && products.length ? products.map(item => (
@@ -52,7 +52,7 @@ function LoadMoreData() {
           )) : <p>No products to display</p>
         }
       </div>
-      
+
       <div className="button__container">
         <button onClick={() => setCount(count + 1)}>Load More</button> {/* Add button label */}
       </div>
