@@ -2,7 +2,6 @@ const menuData = [
   {
     title: "Home",
     path: "/home",
-    icon: "home",
     subMenu: [
       {
         title: "Introduction",
@@ -20,7 +19,6 @@ const menuData = [
   {
     title: "Services",
     path: "/services",
-    icon: "services",
     subMenu: [
       {
         title: "Web Development",
@@ -64,7 +62,6 @@ const menuData = [
   {
     title: "Portfolio",
     path: "/portfolio",
-    icon: "portfolio",
     subMenu: [
       {
         title: "Projects",
@@ -103,7 +100,6 @@ const menuData = [
   {
     title: "Contact",
     path: "/contact",
-    icon: "contact",
     subMenu: [
       {
         title: "Email Us",

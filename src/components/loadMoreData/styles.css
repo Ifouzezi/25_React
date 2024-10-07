@@ -22,4 +22,6 @@
     width: 200px;
     height: 200px;
 }
-.button__container {}
+.button__container {
+    padding-bottom: 20px;
+}

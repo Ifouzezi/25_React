@@ -5,13 +5,15 @@ import './styles.css';
 
 const Sidebar = () => {
   return (
-    <aside className="sidebar">
-      <ul className="sidebar-menu">
-        {menuData.map((item, index) => (
-          <MenuItem key={index} item={item} />
-        ))}
-      </ul>
-    </aside>
+    <div className="sidebar__container">
+      <aside className="sidebar">
+        <ul className="sidebar-menu">
+          {menuData.map((item, index) => (
+            <MenuItem key={index} item={item} />
+          ))}
+        </ul>
+      </aside>
+    </div>
   );
 };
 

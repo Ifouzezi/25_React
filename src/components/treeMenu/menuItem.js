@@ -14,11 +14,8 @@ const MenuItem = ({ item }) => {
   return (
     <li>
       <div onClick={handleToggle} className="menu-item">
-        {/* Render icon if it exists */}
-        <span>{item.icon && <i className={`icon-${item.icon}`} />}</span>
-        
         {/* The title and path for the menu item */}
-        <a href={item.path} className="menu-title">{item.title}</a>
+        <a className="menu-title">{item.title}</a>
 
         {/* Render + or - depending on whether submenu is open */}
         {item.subMenu.length > 0 && (
