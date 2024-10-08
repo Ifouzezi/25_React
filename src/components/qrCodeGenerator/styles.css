@@ -1,0 +1,133 @@
+/* General container for the QR code generator */
+.qrcode__generator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styling for the heading */
+.qrcode__generator h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Container for the input and button */
+.qrcode__input {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 500px;
+    justify-content: center;
+}
+
+/* Input field styling */
+.qrcode__input input {
+    width: 70%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.qrcode__input input:focus {
+    border-color: #4caf50;
+}
+
+/* Button styling */
+.qrcode__btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.qrcode__btn:hover {
+    background-color: #45a049;
+}
+
+.qrcode__btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* QR Code box styling */
+.qrcode__box {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styling for tablets and mobile */
+@media (max-width: 768px) {
+    .qrcode__generator h1 {
+        font-size: 1.5rem;
+    }
+
+    
+    .qrcode__input {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .qrcode__input input {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .qrcode__btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .qrcode__box {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Mobile-specific styles */
+@media (max-width: 480px) {
+    .qrcode__generator h1 {
+        font-size: 1.25rem;
+        margin-bottom: 15px;
+    }
+
+    .qrcode__input input {
+        font-size: 0.9rem;
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .qrcode__btn {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .qrcode__box {
+        margin-top: 15px;
+        padding: 15px;
+        box-shadow: none;
+        width: 100%; 
+        box-sizing: border-box;
+    }
+}
