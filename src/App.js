@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App">
       {/* Accordian component */}
-      <Accordian />
+      {/* <Accordian /> */}
 
       {/* RandomColor component */}
       {/* <RandomColor /> */}

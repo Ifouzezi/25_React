@@ -6,11 +6,11 @@ function QRCodeGenerator() {
     const [qrCode, setQrCode] = useState('');
     const [input, setInput] = useState('');
     const [isGenerated, setIsGenerated] = useState(false);
-    const [qrCodeSize, setQrCodeSize] = useState(window.innerWidth < 480 ? '' : 400); 
+    const [qrCodeSize, setQrCodeSize] = useState(window.innerWidth < 480 ? '' : 350); 
   
     useEffect(() => {
         const handleResize = () => {
-            setQrCodeSize(window.innerWidth < 480 ? '' : 400);
+            setQrCodeSize(window.innerWidth < 480 ? '' : 350);
         };
 
         window.addEventListener('resize', handleResize);
