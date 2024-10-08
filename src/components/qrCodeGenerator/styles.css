@@ -1,4 +1,8 @@
 /* General container for the QR code generator */
+* {
+    box-sizing: border-box;
+}
+
 .qrcode__generator {
     display: flex;
     flex-direction: column;
@@ -128,6 +132,6 @@
         padding: 15px;
         box-shadow: none;
         width: 100%; 
-        box-sizing: border-box;
+        
     }
 }
