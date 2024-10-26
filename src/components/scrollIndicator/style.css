@@ -1,0 +1,50 @@
+.headerContainer {
+    position: fixed;
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    background: wheat;
+}
+
+h1 {
+    text-align: center; /* Center the header text */
+    margin: 0;
+    font-size: 2em; /* Increase the font size */
+    color: #333; /* Change the color of the header text */
+}
+
+.scroll-indicator-container {
+    position: relative;
+}
+
+.scroll-indicator {
+    position: fixed;
+    top: 61.8px;
+    left: 0;
+    height: 10px;
+    background-color: #4caf50;
+    z-index: 10;
+    /* transition: width 0.25s ease; Smooth transition for the scroll indicator */
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 5 items per row */
+    gap: 16px; /* Space between products */
+    padding: 16px;
+    padding-top: 82.8px
+}
+
+.product {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
