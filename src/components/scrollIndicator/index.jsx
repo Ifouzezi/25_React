@@ -41,6 +41,9 @@ const ScrollIndicator = () => {
         <div className="scroll-indicator-container">
             <div className="headerContainer">
                 <h1>Custom Scroll Indicator</h1>
+                <div className="scroll__overlay">
+                    
+                </div>
             </div>
             {/* Scroll Indicator Bar */}
             <div

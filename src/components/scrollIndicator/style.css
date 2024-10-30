@@ -13,6 +13,14 @@ h1 {
     color: #333; /* Change the color of the header text */
 }
 
+.scroll__overlay {
+  background-color: rgb(255, 93, 120);
+  height: 10px;
+  width: 100vw;
+  left: -11px;
+  position: relative;
+  top: 10px;
+}
 .scroll-indicator-container {
     position: relative;
 }
@@ -22,7 +30,7 @@ h1 {
     top: 61.8px;
     left: 0;
     height: 10px;
-    background-color: #4caf50;
+    background-color: red;
     z-index: 10;
     /* transition: width 0.25s ease; Smooth transition for the scroll indicator */
 }
