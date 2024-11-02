@@ -1,0 +1,66 @@
+/* General wrapper styling */
+.wrapper {
+    max-width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Tab heading */
+.heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.label {
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff; 
+    background: grey;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Active tab styling */
+.label.active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Content area */
+.content {
+    padding: 16px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    min-height: 100px;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .heading {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .label {
+        width: fit-content;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .label {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .content {
+        padding: 12px;
+    }
+}

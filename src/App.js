@@ -1,5 +1,6 @@
 import './App.css';
 import Accordian from './components/accordian';
+import TabsTest from './components/customTab/tabsTest';
 import ImageSlider from './components/imageSlider';
 import LightDarkMode from './components/lightDarkMode';
 import LoadMoreData from './components/loadMoreData';
@@ -38,6 +39,9 @@ function App() {
 
       {/* Scroll Indicator */}
       <ScrollIndicator/>
+
+      {/* Custom Tabs */}
+      <TabsTest/>
 
     </div>
   );
