@@ -1,5 +1,6 @@
 import './App.css';
 import Accordian from './components/accordian';
+import ModalTest from './components/customModal/modalTest';
 import TabsTest from './components/customTab/tabsTest';
 import ImageSlider from './components/imageSlider';
 import LightDarkMode from './components/lightDarkMode';
@@ -38,11 +39,13 @@ function App() {
       {/* <LightDarkMode/> */}
 
       {/* Scroll Indicator */}
-      <ScrollIndicator/>
+      {/* <ScrollIndicator/> */}
 
       {/* Custom Tabs */}
-      <TabsTest/>
+      {/* <TabsTest/> */}
 
+      {/* Custos Modal */}
+      <ModalTest/>
     </div>
   );
 }
