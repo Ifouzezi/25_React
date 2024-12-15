@@ -5,24 +5,23 @@ import "./styles.css";
 const GithubProfile = () => {
     const [userName, setUserName] = useState('Ifouzezi');
     const [userData, setUserData] = useState(null);
+    const [suggestions, setSuggestions] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
+    // Fetch user data
     async function fetchGithubUserData() {
         setLoading(true);
-        setError(null); // Reset any previous error
-        setUserData(null); // Reset previous user data
+        setError(null);
+        setUserData(null);
 
         try {
             const res = await fetch(`https://api.github.com/users/${userName}`);
-
             if (!res.ok) {
-                throw new Error(`User not found`);
+                throw new Error("User not found");
             }
-
             const data = await res.json();
             setUserData(data);
-            console.log(data);
         } catch (err) {
             setError(err.message);
         } finally {
@@ -30,13 +29,34 @@ const GithubProfile = () => {
         }
     }
 
-    function handleSubmit() {
-        fetchGithubUserData(); // Fetch user data when the search button is clicked
+    // Fetch suggestions for autocomplete
+    async function fetchSuggestions(query) {
+        if (query.trim() === "") {
+            setSuggestions([]);
+            return;
+        }
+
+        try {
+            const res = await fetch(`https://api.github.com/search/users?q=${query}`);
+            const data = await res.json();
+            setSuggestions(data.items || []);
+        } catch {
+            setSuggestions([]);
+        }
     }
 
-    useEffect(() => {
-        fetchGithubUserData(); // Fetch initial data when the component mounts
-    }, []);
+    // Handle search submission
+    function handleSubmit() {
+        fetchGithubUserData();
+        setSuggestions([]); // Clear suggestions after submission
+    }
+
+    // Handle input changes
+    function handleInputChange(event) {
+        const query = event.target.value;
+        setUserName(query);
+        fetchSuggestions(query); // Fetch autocomplete suggestions
+    }
 
     if (loading) {
         return <h1>Loading data, please wait...</h1>;
@@ -50,14 +70,31 @@ const GithubProfile = () => {
                     name="search-by-username"
                     placeholder="Search GitHub Username..."
                     value={userName}
-                    onChange={(event) => setUserName(event.target.value)}
+                    onChange={handleInputChange}
                     onKeyDown={(event) => {
                         if (event.key === "Enter") {
-                            handleSubmit(); // Trigger the search when the Enter key is pressed
+                            handleSubmit();
                         }
                     }}
                 />
                 <button className="button" onClick={handleSubmit}>Search</button>
+
+                {/* Autocomplete suggestions */}
+                {suggestions.length > 0 && (
+                    <ul className="suggestions">
+                        {suggestions.map((user) => (
+                            <li
+                                key={user.id}
+                                onClick={() => {
+                                    setUserName(user.login);
+                                    setSuggestions([]); // Clear suggestions
+                                }}
+                            >
+                                {user.login}
+                            </li>
+                        ))}
+                    </ul>
+                )}
             </div>
             {error && <h2 style={{ color: "red" }}>{error}</h2>}
             {userData && <User user={userData} />}
