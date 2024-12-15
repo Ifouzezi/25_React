@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import User from "./userCard";
+import "./styles.css";
 
 const GithubProfile = () => {
     const [userName, setUserName] = useState('Ifouzezi');
@@ -50,8 +51,13 @@ const GithubProfile = () => {
                     placeholder="Search GitHub Username..."
                     value={userName}
                     onChange={(event) => setUserName(event.target.value)}
+                    onKeyDown={(event) => {
+                        if (event.key === "Enter") {
+                            handleSubmit(); // Trigger the search when the Enter key is pressed
+                        }
+                    }}
                 />
-                <button onClick={handleSubmit}>Search</button>
+                <button className="button" onClick={handleSubmit}>Search</button>
             </div>
             {error && <h2 style={{ color: "red" }}>{error}</h2>}
             {userData && <User user={userData} />}

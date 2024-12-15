@@ -46,7 +46,7 @@ function App() {
       {/* <TabsTest/> */}
 
       {/* Custos Modal */}
-      {/* <ModalTest/> */}
+      <ModalTest/>
 
       {/* Github Profile Finder */}
       <GithubProfile/>

@@ -11,7 +11,7 @@ function ModalTest() {
     }
 
     return (
-        <div>
+        <div className="modalContainer">
             <button onClick={handlePopup} className="open-modal-button">
                 Open Modal
             </button>

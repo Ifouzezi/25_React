@@ -1,4 +1,7 @@
 /* modal.css */
+.modalContainer {
+    height: 100vh;
+}
 .modal {
     position: fixed;
     top: 0;

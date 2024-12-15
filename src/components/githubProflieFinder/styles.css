@@ -1,0 +1,115 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* GithubProfile container */
+.githubProfileContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: tomato;
+    height: 100vh;
+}
+
+/* Input wrapper */
+.inputWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.inputWrapper input {
+    width: 250px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+
+.inputWrapper input:focus {
+    border-color: #0077ff;
+}
+
+.inputWrapper button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #0077ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.inputWrapper button:hover {
+    background-color: #005bb5;
+}
+
+.button {
+    margin: 0;
+}
+
+/* User component */
+.user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.user .avatarWrapper {
+    margin-bottom: 15px;
+}
+
+.user .avatarWrapper img {
+    width: 76%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid tomato;
+}
+
+.user .userInfo {
+    text-align: center;
+    margin-right: 96px;
+}
+
+.userInfo h1 {
+    
+}
+
+.user .userInfo a {
+    color: #0077ff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.user .userInfo a:hover {
+    text-decoration: underline;
+}
+
+.user .userInfo ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.user .userInfo ul li {
+    margin: 5px 0;
+}
