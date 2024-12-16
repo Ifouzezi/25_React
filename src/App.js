@@ -1,5 +1,6 @@
 import './App.css';
 import Accordian from './components/accordian';
+import AutoCompleteSearch from './components/autoCompleteSearch';
 import ModalTest from './components/customModal/modalTest';
 import TabsTest from './components/customTab/tabsTest';
 import GithubProfile from './components/githubProflieFinder';
@@ -46,10 +47,12 @@ function App() {
       {/* <TabsTest/> */}
 
       {/* Custos Modal */}
-      <ModalTest/>
+      {/* <ModalTest/> */}
 
       {/* Github Profile Finder */}
-      <GithubProfile/>
+      {/* <GithubProfile/> */}
+
+      <AutoCompleteSearch/>
     </div>
   );
 }
