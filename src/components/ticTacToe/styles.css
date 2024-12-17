@@ -1,0 +1,70 @@
+.tic-tac-toe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    padding-top: 50px;
+    background-color: #8d8661;
+    color: white;
+    height: 100vh;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: white;
+}
+
+.status {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.reset-button {
+    background-color: #8d8661;
+    border: 1px solid white !important;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.reset-button:hover {
+    background-color: #736d4e;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    margin-bottom: 12px;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.square:hover {
+    background-color: #736d4e;
+}
+
+.square:focus {
+    outline: none;
+    background-color: #8d855f;
+}

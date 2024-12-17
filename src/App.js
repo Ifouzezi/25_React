@@ -11,6 +11,7 @@ import QRCodeGenerator from './components/qrCodeGenerator';
 import RandomColor from './components/randomColor';
 import StarRating from './components/ratingStars';
 import ScrollIndicator from './components/scrollIndicator';
+import TicTacToe from './components/ticTacToe';
 import Sidebar from './components/treeMenu';
 
 
@@ -52,7 +53,9 @@ function App() {
       {/* Github Profile Finder */}
       {/* <GithubProfile/> */}
 
-      <AutoCompleteSearch/>
+      {/* <AutoCompleteSearch/> */}
+
+      <TicTacToe/>
     </div>
   );
 }
