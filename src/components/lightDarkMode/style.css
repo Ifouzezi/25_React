@@ -1,6 +1,5 @@
 /* Make the whole screen cover */
 .lightDarkMode {
-    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;

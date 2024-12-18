@@ -28,7 +28,7 @@ const TicTacToe = () => {
     const status = winner
         ? `Winner: ${winner}`
         : isBoardFull
-        ? "It's a Draw!"
+        ? "It's a Draw! Please restart the game"
         : `Next Player: ${isXNext ? "X" : "O"}`;
     const resetGame = () => {
         setSquares(Array(9).fill(null));
