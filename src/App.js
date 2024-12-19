@@ -15,6 +15,7 @@ import StarRating from './components/ratingStars';
 import ScrollIndicator from './components/scrollIndicator';
 import TicTacToe from './components/ticTacToe';
 import Sidebar from './components/treeMenu';
+import Weatherapp from './components/weatherApp';
 
 
 function App() {
@@ -58,10 +59,12 @@ function App() {
       {/* <AutoCompleteSearch/> */}
 
       {/* <TicTacToe/> */}
-      
+{/*       
       <FeatureFlagGlobalState>
         <FeatureFlag/>
-      </FeatureFlagGlobalState>
+      </FeatureFlagGlobalState> */}
+
+      <Weatherapp/>
     </div>
   );
 }
