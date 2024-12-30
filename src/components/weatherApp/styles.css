@@ -66,6 +66,14 @@
     font-size: 24px;
   }
   
+  .weather-details span, .city-name {
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+   
+  .city-name span {
+    margin-left: 4px;
+  }
   .weather-details p {
     margin: 5px 0;
     font-size: 16px;
@@ -89,13 +97,16 @@
     text-align: center;
   }
   
-  .weather-info h3 {
+  .fs-20 {
+    font-size: 20px;
+  }
+  .weather-info h3, .description h3{
     margin: 0;
     font-size: 20px;
   }
   
-  .weather-info p {
+  .description p {
     margin: 5px 0;
-    font-size: 14px;
+    font-size: 18px;
   }
   

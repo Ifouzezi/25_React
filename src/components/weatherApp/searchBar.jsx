@@ -10,6 +10,11 @@ const SearchBar = ({ search, setSearch, handleSearch }) => {
                 name='search'
                 value={search}
                 onChange={(event) => setSearch(event.target.value)}
+                onKeyDown={(event) => {
+                    if (event.key === "Enter") {
+                        handleSearch();
+                    }
+                }}
             />
             <button onClick={handleSearch}>
                 Search
