@@ -75,7 +75,6 @@ const Weather = () => {
                             <p>
                             {weatherData?.name} is experiencing some {weatherData && weatherData.weather && weatherData.weather[0].description} today.
                             </p> 
-
                         </div>
                     </div>
             }

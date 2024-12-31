@@ -22,47 +22,47 @@ function App() {
   return (
     <div className="App">
       {/* Accordian component */}
-      {/* <Accordian /> */}
+      <Accordian />
 
       {/* RandomColor component */}
-      {/* <RandomColor /> */}
+      <RandomColor />
 
       {/* RatingStars component */}
-      {/* <StarRating noOfStars ={5}/> */}
+      <StarRating noOfStars ={5}/>
 
       {/* ImageSlider component */}
-      {/* <ImageSlider/> */}
+      <ImageSlider/>
 
       {/* LoadMoreData component */}
-      {/* <LoadMoreData/> */}
+      <LoadMoreData/>
 
       {/* TreeMenu component */}
-      {/* <Sidebar/> */}
+      <Sidebar/>
 
       {/* QR Code Generator */}
-      {/* <QRCodeGenerator/> */}
+      <QRCodeGenerator/>
       {/* Light Dark Mode */}
-      {/* <LightDarkMode/> */}
+      <LightDarkMode/>
 
       {/* Scroll Indicator */}
-      {/* <ScrollIndicator/> */}
+      <ScrollIndicator/>
 
       {/* Custom Tabs */}
-      {/* <TabsTest/> */}
+      <TabsTest/>
 
       {/* Custos Modal */}
-      {/* <ModalTest/> */}
+      <ModalTest/>
 
       {/* Github Profile Finder */}
-      {/* <GithubProfile/> */}
+      <GithubProfile/>
 
-      {/* <AutoCompleteSearch/> */}
+      <AutoCompleteSearch/>
 
-      {/* <TicTacToe/> */}
-{/*       
+      <TicTacToe/>
+      
       <FeatureFlagGlobalState>
         <FeatureFlag/>
-      </FeatureFlagGlobalState> */}
+      </FeatureFlagGlobalState>
 
       <Weatherapp/>
     </div>
